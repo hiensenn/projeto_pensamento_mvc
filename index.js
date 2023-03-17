@@ -13,6 +13,13 @@ const conn = require('./db/conn')
 const Tought = require('./models/Tought')
 const User = require('./models/User')
 
+
+//Import Routes
+const toughtsRoutes = require('./routes/toughtsRoutes')
+
+//Import controller
+const ToughtController = require('./controllers/ToughtController')
+
 //template engine
 app.engine('handlebars', exphbs.engine())
 app.set('view engine', 'handlebars')
@@ -66,8 +73,12 @@ app.use((req, res, next) => {
 })
 
 
+//Routes
+app.use('/toughts', toughtsRoutes)
+app.get('/', ToughtController.showToughts)
+
 conn
-    //.sync({force : true}) Dados Relacionados
+    //.sync({force : true}) a tabela existente será excluída e criada novamente com base no modelo atualizado.
     .sync()
     .then(() => {
         app.listen(3000)
