@@ -3,12 +3,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
+    background-color: rgb(22, 21, 21);
+    color: #fff;
 }
 
 /* NavBar */
 #logo img{
-    height: 80px;
+    height: 50px;
 }
 
 #navbar{
@@ -29,19 +30,99 @@
 }
 #navbar .ul li a {
     text-decoration: none;
-    color:  #d34178;
-    transition: .5s;
+    transition: .3s;
     font-weight: bold;
+    color: #fff;
 }
 #navbar .ul li a:hover{
-    color: #ce7396;
+    color: #d34178;
 }
 
 /* Container */
 .container{
-    min-height: 60vh;
-    padding: 2em;
+    min-height: 65vh;
+    padding: 2em; 
+}
+
+/* Messages */
+.message{
+    padding: 1em;
+    color: #fff ;
+    background-color: #d34178;
+    border: 1px solid #e66496;
+    border-radius: 5px;
     text-align: center;
+    margin: 0 auto 1em;
+    max-width: 60%;
+    height: 50px;
+}
+
+/* LOGIN e REGISTER */
+.auth-container{
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+.auth-container h2{
+    margin-bottom: 1em;
+    border-left: 4px solid #d34178;
+    padding: .3em;
+    width: 100px;
+}
+
+.auth-container a{
+    color: #d34178;
+}
+.auth-container a:hover{
+    transition: .3s;
+    color: #e66496;
+}
+.form-control{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+
+}
+
+.form-control label{
+    font-weight: bold;
+    margin-bottom: .5em;
+
+}
+.form-control input,
+.form-control textarea{
+    padding: 7px;
+    border-radius: 3px;
+    border-color: #d34178;
+
+}
+.cadastrar,
+p {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+form input[type='submit'],
+.btn{
+    background-color: transparent;
+    color: #d34178;
+    border: 2px solid #d34178;
+    padding: .5em 1.2em;
+    margin-bottom: 1em;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: .3s;
+}
+
+form input[type='submit']:hover,
+.btn:hover{
+    background-color: #d34178;
+    color: #fff;
 }
 
 /* Footer */
@@ -51,6 +132,7 @@ footer{
     justify-content: center;
     align-items: center;
     border-top: 1px solid #d34178;
+    
 }
 footer span{
     font-weight: bold;
