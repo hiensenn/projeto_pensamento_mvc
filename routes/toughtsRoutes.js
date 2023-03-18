@@ -6,7 +6,11 @@ const router = express.Router()
 const checkAuth = require('../helpers/auth').checkAuth //middleware que checa se o usuário está logado
 
 router.get('/add', checkAuth ,ToughtController.createTought)
+router.post('/add', checkAuth ,ToughtController.createToughtSave)
+router.get('/edit/:id', checkAuth ,ToughtController.updateTought)
+router.post('/edit', checkAuth ,ToughtController.updateToughtSave)
 router.get('/dashboard', checkAuth ,ToughtController.dashboard) //utilizando o middleware
+router.post('/remove', checkAuth ,ToughtController.removeTought)
 router.get('/', ToughtController.showToughts)
 
 module.exports = router
