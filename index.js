@@ -82,7 +82,7 @@ app.get('/', ToughtController.showToughts)
 
 
 conn
-    //.sync({force : true}) a tabela existente será excluída e criada novamente com base no modelo atualizado.
+    //.sync({force : true}) //a tabela existente será excluída e criada novamente com base no modelo atualizado.
     .sync()
     .then(() => {
         app.listen(3000)
